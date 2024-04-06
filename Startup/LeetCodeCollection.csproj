@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks\Add Two Numbers\Add Two Numbers.csproj" />
+    <ProjectReference Include="..\Tasks\Defanging an IP Address\Defanging an IP Address.csproj" />
+    <ProjectReference Include="..\Tasks\Longest Substring Without Repeating Characters\Longest Substring Without Repeating Characters.csproj" />
+    <ProjectReference Include="..\Tasks\Make The String Great\Make The String Great.csproj" />
+    <ProjectReference Include="..\Tasks\Maximum Nesting Depth of the Parentheses\Maximum Nesting Depth of the Parentheses.csproj" />
+    <ProjectReference Include="..\Tasks\Palindrome Number\Palindrome Number.csproj" />
+    <ProjectReference Include="..\Tasks\Two Sum\Task_Two_Sum.csproj" />
+    <ProjectReference Include="..\Types For Tasks\Types For Tasks.csproj" />
+  </ItemGroup>
+
+</Project>
