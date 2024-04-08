@@ -4,7 +4,9 @@ using FluentAssertions;
 using Longest_Substring_Without_Repeating_Characters;
 using Make_The_String_Great;
 using Maximum_Nesting_Depth_of_the_Parentheses;
+using Minimum_Remove_to_Make_Valid_Parentheses;
 using Palindrome_Number;
+using Roman_to_Integer;
 using Types_For_Tasks;
 
 namespace LeetCodeCollection;
@@ -60,13 +62,33 @@ internal class Program
 
 		#endregion
 
-		#region Palindrome Number
+		#region Make The String Great
 
-
-		MakeTheStringGreat.MakeGood("leEeetcode").Should().Be("leetcode");
-		MakeTheStringGreat.MakeGood("abBAcC").Should().Be(string.Empty);
+		//MakeTheStringGreat.MakeGood("leEeetcode").Should().Be("leetcode");
+		//MakeTheStringGreat.MakeGood("abBAcC").Should().Be(string.Empty);
 
 		#endregion
 
+		#region Minimum Remove to Make Valid Parentheses 
+
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("a(bc").Should().Be("abc");
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("(t(e)y))d(()(e(").Should().Be("(t(e)y)d()e");
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("(a(b(c)d)").Should().BeOneOf(new List<string> { "a(b(c)d)", "(a(bc)d)"});
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("())()(((").Should().Be("()()");
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("))").Should().Be(string.Empty);
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("))((").Should().Be(string.Empty);
+
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("a)b(c)d").Should().Be("ab(c)d");
+		MinimumRemoveToMakeValidParentheses.MinRemoveToMakeValid("lee(t(c)o)de)").Should().BeOneOf(new List<string>{"lee(t(c)ode)","lee(t(co)de)", "lee(t(c)o)de" });
+
+		#endregion
+
+		#region Minimum Remove to Make Valid Parentheses 
+
+		RomanToInteger.RomanToInt("III").Should().Be(3);
+		RomanToInteger.RomanToInt("LVIII").Should().Be(58);
+		RomanToInteger.RomanToInt("MCMXCIV").Should().Be(1994);
+
+		#endregion
 	}
 }

@@ -4,7 +4,7 @@ public static class MakeTheStringGreat
 {
 	public static string MakeGood(string s)
 	{
-		if(s.Length < 2)
+		//if(s.Length < 2)
 			return string.Empty;
 
 
