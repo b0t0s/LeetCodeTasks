@@ -17,18 +17,18 @@ internal class Program
 	{
 		#region TwoSum
 
-		Console.WriteLine("[{0}]", string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 3, 3 }, 6)));
-		Console.WriteLine("[{0}]", string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 3, 2, 4 }, 6)));
-		Console.WriteLine("[{0}]", string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 5, 2, 7 }, 12)));
-		Console.WriteLine("[{0}]", string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new double[] { 188.5, 188.5, 187.5, 189.5 }, 377)));
+		string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 3, 3 }, 6)).Should().Be(@"0, 1");
+		string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 3, 2, 4 }, 6)).Should().Be(@"1, 2");
+		string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new int[] { 5, 2, 7 }, 12)).Should().Be(@"0, 2");
+		string.Join(", ", Two_Sum.TwoSumClass.TwoSum(new double[] { 188.5, 188.5, 187.5, 189.5 }, 377)).Should().Be(@"0, 1");
 
 		#endregion
 
 		#region AddTwoNumbers
 
-		Console.WriteLine(AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).val); // 7 -> 0 -> 8
-		Console.WriteLine(AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).next.val); // 7 -> 0 -> 8
-		Console.WriteLine(AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).next.next.val); // 7 -> 0 -> 8
+		AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).val.Should().Be(7); // 7 -> 0 -> 8
+		AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).next.val.Should().Be(0); // 7 -> 0 -> 8
+		AddTwoNumbersClass.AddTwoNumbers(new ListNode(2, new ListNode(4, new ListNode(3))), new ListNode(5, new ListNode(6, new ListNode(4)))).next.next.val.Should().Be(8); // 7 -> 0 -> 8
 
 		#endregion
 
